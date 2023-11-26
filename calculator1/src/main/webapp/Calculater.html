@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: #F2F2F2; /* Light gray background */
+            color: #333333; /* Dark gray text color */
+            font-size: 18px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333; /* Dark gray header text color */
+            font-size: 28px;
+            margin-top: 30px;
+        }
+
+        form {
+            border: 1px solid #CCCCCC; /* Light gray border color */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 50px auto; /* Center the form */
+            width: 40%; /* Set form width */
+            background-color: #FFFFFF; /* White background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        input {
+            border: 1px solid #CCCCCC; /* Light gray border color */
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 16px;
+            width: 100%; /* Make input fields fill the width */
+        }
+
+        select {
+            border: 1px solid #CCCCCC; /* Light gray border color */
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 16px;
+            width: 100%; /* Make select field fill the width */
+        }
+
+        .btn {
+            background-color: #4285F4; /* Blue button background color */
+            color: #FFFFFF; /* White button text color */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #3367D6; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <form action="OperationServlet" method="post">
+        <div>Enter Number 1: <input type="text" name="num1"></div>
+        <div>Enter Number 2: <input type="text" name="num2"></div>
+        Select Operation:
+        <select name="operation">
+            <option value="addition">Addition</option>
+            <option value="multiplication">Multiplication</option>
+        </select>
+        <br>
+        <input type="submit" value="Calculate" class="btn">
+    </form>
+</body>
+</html>
